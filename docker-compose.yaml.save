@@ -15,7 +15,7 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - mysql_data:/var/lib/mysql 
+      - mysql_data:/var/lib/mysql
   app:
     build: ./my_app
     command: gunicorn --bind  0.0.0.0:8000 my_app.wsgi
